@@ -2,7 +2,7 @@
 
 import sys, csv, re
 
-codes = [{"code":"SP08P00","system":"readv2"},{"code":"SP07G00","system":"readv2"},{"code":"Gy10.00","system":"readv2"},{"code":"Gy1..00","system":"readv2"}];
+codes = [{"code":"ZV56011","system":"readv2"},{"code":"SP08P00","system":"readv2"},{"code":"SP07G00","system":"readv2"},{"code":"Gy10.00","system":"readv2"},{"code":"Gy1..00","system":"readv2"}];
 REQUIRED_CODES = 1;
 with open(sys.argv[1], 'r') as file_in, open('end-stage-renal-disease-potential-cases.csv', 'w', newline='') as file_out:
     csv_reader = csv.DictReader(file_in)
