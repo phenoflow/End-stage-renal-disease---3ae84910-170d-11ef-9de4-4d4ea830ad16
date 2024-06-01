@@ -11,8 +11,8 @@ steps:
       potentialCases:
         id: potentialCases
         source: potentialCases
-  end-stage-renal-disease-aftercare---primary:
-    run: end-stage-renal-disease-aftercare---primary.cwl
+  end-stage-renal-disease-stenosis---primary:
+    run: end-stage-renal-disease-stenosis---primary.cwl
     out:
     - output
     in:
@@ -32,7 +32,7 @@ steps:
         source: inputModule3
       potentialCases:
         id: potentialCases
-        source: end-stage-renal-disease-aftercare---primary/output
+        source: end-stage-renal-disease-stenosis---primary/output
   end-stage-renal-disease-aneurysm---primary:
     run: end-stage-renal-disease-aneurysm---primary.cwl
     out:
@@ -77,8 +77,8 @@ steps:
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-posttransplantation---primary/output
-  continuous-end-stage-renal-disease---primary:
-    run: continuous-end-stage-renal-disease---primary.cwl
+  end-stage-renal-disease-involving---primary:
+    run: end-stage-renal-disease-involving---primary.cwl
     out:
     - output
     in:
@@ -88,6 +88,17 @@ steps:
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-proteinuria---primary/output
+  continuous-end-stage-renal-disease---primary:
+    run: continuous-end-stage-renal-disease---primary.cwl
+    out:
+    - output
+    in:
+      inputModule:
+        id: inputModule
+        source: inputModule9
+      potentialCases:
+        id: potentialCases
+        source: end-stage-renal-disease-involving---primary/output
   end-stage-renal-disease-graft---primary:
     run: end-stage-renal-disease-graft---primary.cwl
     out:
@@ -95,7 +106,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule9
+        source: inputModule10
       potentialCases:
         id: potentialCases
         source: continuous-end-stage-renal-disease---primary/output
@@ -106,23 +117,12 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule10
-      potentialCases:
-        id: potentialCases
-        source: end-stage-renal-disease-graft---primary/output
-  end-stage-renal-disease-transplanted---primary:
-    run: end-stage-renal-disease-transplanted---primary.cwl
-    out:
-    - output
-    in:
-      inputModule:
-        id: inputModule
         source: inputModule11
       potentialCases:
         id: potentialCases
-        source: end-stage-renal-disease-removal---primary/output
-  end-stage-renal-disease-occlusion---primary:
-    run: end-stage-renal-disease-occlusion---primary.cwl
+        source: end-stage-renal-disease-graft---primary/output
+  end-stage-renal-disease-aftercare---primary:
+    run: end-stage-renal-disease-aftercare---primary.cwl
     out:
     - output
     in:
@@ -131,9 +131,9 @@ steps:
         source: inputModule12
       potentialCases:
         id: potentialCases
-        source: end-stage-renal-disease-transplanted---primary/output
-  end-stage-renal-disease-stenosis---primary:
-    run: end-stage-renal-disease-stenosis---primary.cwl
+        source: end-stage-renal-disease-removal---primary/output
+  end-stage-renal-disease-transplanted---primary:
+    run: end-stage-renal-disease-transplanted---primary.cwl
     out:
     - output
     in:
@@ -142,9 +142,9 @@ steps:
         source: inputModule13
       potentialCases:
         id: potentialCases
-        source: end-stage-renal-disease-occlusion---primary/output
-  end-stage-renal-disease-access---primary:
-    run: end-stage-renal-disease-access---primary.cwl
+        source: end-stage-renal-disease-aftercare---primary/output
+  end-stage-renal-disease-occlusion---primary:
+    run: end-stage-renal-disease-occlusion---primary.cwl
     out:
     - output
     in:
@@ -153,7 +153,18 @@ steps:
         source: inputModule14
       potentialCases:
         id: potentialCases
-        source: end-stage-renal-disease-stenosis---primary/output
+        source: end-stage-renal-disease-transplanted---primary/output
+  end-stage-renal-disease-access---primary:
+    run: end-stage-renal-disease-access---primary.cwl
+    out:
+    - output
+    in:
+      inputModule:
+        id: inputModule
+        source: inputModule15
+      potentialCases:
+        id: potentialCases
+        source: end-stage-renal-disease-occlusion---primary/output
   recipient-end-stage-renal-disease---primary:
     run: recipient-end-stage-renal-disease---primary.cwl
     out:
@@ -161,7 +172,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule15
+        source: inputModule16
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-access---primary/output
@@ -172,7 +183,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule16
+        source: inputModule17
       potentialCases:
         id: potentialCases
         source: recipient-end-stage-renal-disease---primary/output
@@ -183,7 +194,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule17
+        source: inputModule18
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-cadaver---primary/output
@@ -194,10 +205,21 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule18
+        source: inputModule19
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-associated---primary/output
+  extracorporeal-end-stage-renal-disease---primary:
+    run: extracorporeal-end-stage-renal-disease---primary.cwl
+    out:
+    - output
+    in:
+      inputModule:
+        id: inputModule
+        source: inputModule20
+      potentialCases:
+        id: potentialCases
+        source: chronic-end-stage-renal-disease---primary/output
   vascular-end-stage-renal-disease---primary:
     run: vascular-end-stage-renal-disease---primary.cwl
     out:
@@ -205,18 +227,18 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule19
+        source: inputModule21
       potentialCases:
         id: potentialCases
-        source: chronic-end-stage-renal-disease---primary/output
-  end-stage-renal-disease-unspecified---primary:
-    run: end-stage-renal-disease-unspecified---primary.cwl
+        source: extracorporeal-end-stage-renal-disease---primary/output
+  intermittent-end-stage-renal-disease---primary:
+    run: intermittent-end-stage-renal-disease---primary.cwl
     out:
     - output
     in:
       inputModule:
         id: inputModule
-        source: inputModule20
+        source: inputModule22
       potentialCases:
         id: potentialCases
         source: vascular-end-stage-renal-disease---primary/output
@@ -227,10 +249,10 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule21
+        source: inputModule23
       potentialCases:
         id: potentialCases
-        source: end-stage-renal-disease-unspecified---primary/output
+        source: intermittent-end-stage-renal-disease---primary/output
   mechanical-end-stage-renal-disease---primary:
     run: mechanical-end-stage-renal-disease---primary.cwl
     out:
@@ -238,7 +260,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule22
+        source: inputModule24
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-automated---primary/output
@@ -249,7 +271,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule23
+        source: inputModule25
       potentialCases:
         id: potentialCases
         source: mechanical-end-stage-renal-disease---primary/output
@@ -260,7 +282,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule24
+        source: inputModule26
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-failure---primary/output
@@ -271,7 +293,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule25
+        source: inputModule27
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-donor---primary/output
@@ -282,7 +304,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule26
+        source: inputModule28
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-thrombosis---primary/output
@@ -293,7 +315,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule27
+        source: inputModule29
       potentialCases:
         id: potentialCases
         source: other-end-stage-renal-disease---primary/output
@@ -304,7 +326,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule28
+        source: inputModule30
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-training---primary/output
@@ -315,7 +337,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule29
+        source: inputModule31
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-blame---primary/output
@@ -326,7 +348,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule30
+        source: inputModule32
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-haemorrhage---primary/output
@@ -337,7 +359,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule31
+        source: inputModule33
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-level---primary/output
@@ -348,7 +370,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule32
+        source: inputModule34
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-examination---primary/output
@@ -359,7 +381,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule33
+        source: inputModule35
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-insertion---primary/output
@@ -370,7 +392,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule34
+        source: inputModule36
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-nonbeating---primary/output
@@ -381,7 +403,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule35
+        source: inputModule37
       potentialCases:
         id: potentialCases
         source: temporary-end-stage-renal-disease---primary/output
@@ -392,7 +414,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule36
+        source: inputModule38
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-exploration---primary/output
@@ -403,7 +425,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule37
+        source: inputModule39
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-catheter---primary/output
@@ -414,7 +436,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule38
+        source: inputModule40
       potentialCases:
         id: potentialCases
         source: renal---primary/output
@@ -425,7 +447,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule39
+        source: inputModule41
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-heart---primary/output
@@ -436,21 +458,10 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule40
+        source: inputModule42
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-procedure---primary/output
-  extracorporeal-end-stage-renal-disease---primary:
-    run: extracorporeal-end-stage-renal-disease---primary.cwl
-    out:
-    - output
-    in:
-      inputModule:
-        id: inputModule
-        source: inputModule41
-      potentialCases:
-        id: potentialCases
-        source: end-stage-renal-disease-perfusion---primary/output
   end-stage-renal-disease-allotransplantation---primary:
     run: end-stage-renal-disease-allotransplantation---primary.cwl
     out:
@@ -458,10 +469,10 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule42
+        source: inputModule43
       potentialCases:
         id: potentialCases
-        source: extracorporeal-end-stage-renal-disease---primary/output
+        source: end-stage-renal-disease-perfusion---primary/output
   end-stage-renal-disease-excision---primary:
     run: end-stage-renal-disease-excision---primary.cwl
     out:
@@ -469,7 +480,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule43
+        source: inputModule44
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-allotransplantation---primary/output
@@ -480,7 +491,7 @@ steps:
     in:
       inputModule:
         id: inputModule
-        source: inputModule44
+        source: inputModule45
       potentialCases:
         id: potentialCases
         source: end-stage-renal-disease-excision---primary/output
@@ -664,6 +675,10 @@ inputs:
     type: File
   inputModule44:
     id: inputModule44
+    doc: Python implementation unit
+    type: File
+  inputModule45:
+    id: inputModule45
     doc: Python implementation unit
     type: File
 outputs:

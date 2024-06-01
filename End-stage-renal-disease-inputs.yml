@@ -6,7 +6,7 @@ inputModule1:
   path: python/read-potential-cases.py
 inputModule2:
   class: File
-  path: python/end-stage-renal-disease-aftercare---primary.py
+  path: python/end-stage-renal-disease-stenosis---primary.py
 inputModule3:
   class: File
   path: python/end-stage-renal-disease-haemodialysis---primary.py
@@ -24,112 +24,115 @@ inputModule7:
   path: python/end-stage-renal-disease-proteinuria---primary.py
 inputModule8:
   class: File
-  path: python/continuous-end-stage-renal-disease---primary.py
+  path: python/end-stage-renal-disease-involving---primary.py
 inputModule9:
   class: File
-  path: python/end-stage-renal-disease-graft---primary.py
+  path: python/continuous-end-stage-renal-disease---primary.py
 inputModule10:
   class: File
-  path: python/end-stage-renal-disease-removal---primary.py
+  path: python/end-stage-renal-disease-graft---primary.py
 inputModule11:
   class: File
-  path: python/end-stage-renal-disease-transplanted---primary.py
+  path: python/end-stage-renal-disease-removal---primary.py
 inputModule12:
   class: File
-  path: python/end-stage-renal-disease-occlusion---primary.py
+  path: python/end-stage-renal-disease-aftercare---primary.py
 inputModule13:
   class: File
-  path: python/end-stage-renal-disease-stenosis---primary.py
+  path: python/end-stage-renal-disease-transplanted---primary.py
 inputModule14:
   class: File
-  path: python/end-stage-renal-disease-access---primary.py
+  path: python/end-stage-renal-disease-occlusion---primary.py
 inputModule15:
   class: File
-  path: python/recipient-end-stage-renal-disease---primary.py
+  path: python/end-stage-renal-disease-access---primary.py
 inputModule16:
   class: File
-  path: python/end-stage-renal-disease-cadaver---primary.py
+  path: python/recipient-end-stage-renal-disease---primary.py
 inputModule17:
   class: File
-  path: python/end-stage-renal-disease-associated---primary.py
+  path: python/end-stage-renal-disease-cadaver---primary.py
 inputModule18:
   class: File
-  path: python/chronic-end-stage-renal-disease---primary.py
+  path: python/end-stage-renal-disease-associated---primary.py
 inputModule19:
   class: File
-  path: python/vascular-end-stage-renal-disease---primary.py
+  path: python/chronic-end-stage-renal-disease---primary.py
 inputModule20:
   class: File
-  path: python/end-stage-renal-disease-unspecified---primary.py
+  path: python/extracorporeal-end-stage-renal-disease---primary.py
 inputModule21:
   class: File
-  path: python/end-stage-renal-disease-automated---primary.py
+  path: python/vascular-end-stage-renal-disease---primary.py
 inputModule22:
   class: File
-  path: python/mechanical-end-stage-renal-disease---primary.py
+  path: python/intermittent-end-stage-renal-disease---primary.py
 inputModule23:
   class: File
-  path: python/end-stage-renal-disease-failure---primary.py
+  path: python/end-stage-renal-disease-automated---primary.py
 inputModule24:
   class: File
-  path: python/end-stage-renal-disease-donor---primary.py
+  path: python/mechanical-end-stage-renal-disease---primary.py
 inputModule25:
   class: File
-  path: python/end-stage-renal-disease-thrombosis---primary.py
+  path: python/end-stage-renal-disease-failure---primary.py
 inputModule26:
   class: File
-  path: python/other-end-stage-renal-disease---primary.py
+  path: python/end-stage-renal-disease-donor---primary.py
 inputModule27:
   class: File
-  path: python/end-stage-renal-disease-training---primary.py
+  path: python/end-stage-renal-disease-thrombosis---primary.py
 inputModule28:
   class: File
-  path: python/end-stage-renal-disease-blame---primary.py
+  path: python/other-end-stage-renal-disease---primary.py
 inputModule29:
   class: File
-  path: python/end-stage-renal-disease-haemorrhage---primary.py
+  path: python/end-stage-renal-disease-training---primary.py
 inputModule30:
   class: File
-  path: python/end-stage-renal-disease-level---primary.py
+  path: python/end-stage-renal-disease-blame---primary.py
 inputModule31:
   class: File
-  path: python/end-stage-renal-disease-examination---primary.py
+  path: python/end-stage-renal-disease-haemorrhage---primary.py
 inputModule32:
   class: File
-  path: python/end-stage-renal-disease-insertion---primary.py
+  path: python/end-stage-renal-disease-level---primary.py
 inputModule33:
   class: File
-  path: python/end-stage-renal-disease-nonbeating---primary.py
+  path: python/end-stage-renal-disease-examination---primary.py
 inputModule34:
   class: File
-  path: python/temporary-end-stage-renal-disease---primary.py
+  path: python/end-stage-renal-disease-insertion---primary.py
 inputModule35:
   class: File
-  path: python/end-stage-renal-disease-exploration---primary.py
+  path: python/end-stage-renal-disease-nonbeating---primary.py
 inputModule36:
   class: File
-  path: python/end-stage-renal-disease-catheter---primary.py
+  path: python/temporary-end-stage-renal-disease---primary.py
 inputModule37:
   class: File
-  path: python/renal---primary.py
+  path: python/end-stage-renal-disease-exploration---primary.py
 inputModule38:
   class: File
-  path: python/end-stage-renal-disease-heart---primary.py
+  path: python/end-stage-renal-disease-catheter---primary.py
 inputModule39:
   class: File
-  path: python/end-stage-renal-disease-procedure---primary.py
+  path: python/renal---primary.py
 inputModule40:
   class: File
-  path: python/end-stage-renal-disease-perfusion---primary.py
+  path: python/end-stage-renal-disease-heart---primary.py
 inputModule41:
   class: File
-  path: python/extracorporeal-end-stage-renal-disease---primary.py
+  path: python/end-stage-renal-disease-procedure---primary.py
 inputModule42:
   class: File
-  path: python/end-stage-renal-disease-allotransplantation---primary.py
+  path: python/end-stage-renal-disease-perfusion---primary.py
 inputModule43:
   class: File
-  path: python/end-stage-renal-disease-excision---primary.py
+  path: python/end-stage-renal-disease-allotransplantation---primary.py
 inputModule44:
+  class: File
+  path: python/end-stage-renal-disease-excision---primary.py
+inputModule45:
   class: File
   path: python/output-cases.py
